@@ -5,6 +5,7 @@ console.log("HTML & JAVA ARE PROPERLY LINKED!!")
 timeNow();
 console.log("timeNow:", timeNow);
 
+displayWeatherTimeIcons();
 /////////////////////////////////////////////////////////////////////
 //FUNCTION TO UPDATE MY TIME HOURS AND MINUTES
 /////////////////////////////////////////////////////////////////////
@@ -31,7 +32,7 @@ function timeNow() {
 //VARIABLES & DOM ELEMENTS
 /////////////////////////////////////////////////////////////////////
 //DISPLAYS THE DAY
-const todaysDate = moment().format("MMMM Do, YYYY")
+const todaysDate = moment().format("MMMM D,  YYYY");
 console.log("todaysDate:", todaysDate);
 
 //DISPLAYS THE CURRENT TIME AM/PM
@@ -46,6 +47,7 @@ console.log("currentHour:", currentHour);
 const currentWeekday = moment().format("dddd");
 console.log("currentWeekday:", currentWeekday);
 
+
 // const currentWeatherStatus;
 
 //DISPLAYS THE CURRENT TIME
@@ -56,9 +58,6 @@ $(".weekday").text(currentWeekday);
 
 //DISPLAYS THE CURRENT DATE
 $(".date").text(todaysDate);
-
-
-
 
 
 ////////////////////////////////////////////////////////////////////
@@ -87,35 +86,60 @@ formatAMPM();
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 
-function displayWeatherTime() {
+function displayWeatherTimeIcons() {
 
-
-    //TESTING IF THE DATE AND TIME IS ON THE WORKDAY SCHEDULER HEADING
-    console.log("currentDay:", currentDay);
-
-    $("#currentTime").text(currentTime);
-    
-  //TESTING IF THE DATE AND TIME IS ON THE WORKDAY SCHEDULER HEADING
-    console.log("currentTime:", currentTime);
-    
-  //THIS VARIBALE STORS THE HOUR ID
-    var hourId = parseInt(moment().hour());
+    //THIS VARIBALE STORS THE HOUR ID
+    const hourId = parseInt(moment().hour());
     console.log("hourId:", hourId);
 
     //HOUR FOR LOOP 
-    for (var hour = 9; hour < 18; hour++) {
+    for (let hour = 0; hour <= 24; hour++) {
         //variable hour = 9am; less than 6pm; hour increase each time)
 
-        var hourEl = moment().hour(hour);
+        const hourEl = moment().hour(hour);
         console.log("hourEl:", hourEl)
 
-        var hourIndex = parseInt(hourEl.format("h"));
+        const hourIndex = parseInt(hourEl.format("h"));
         console.log("hourIndex:", hourIndex);
 
+        //CREATE A ROW TO WRAP EVERYTHING IN
+        const card = $('<div class="card"></div>');
 
+        const cardHeader = $('<div class="cardTitle"></div>');
 
+        const hourSpan = $('<span class="hour" style="color:#ffffff;font-size:15px;font-weight: bold;font-family:Poppins, sans-serif;">' + formatAMPM(hour) + "</span>");
+        console.log("hour:", hour);
 
-    }
+        cardHeader.append(hourSpan);
+
+        const cardBody = $('<div class="box"></div>');
+
+        const iconSpan = $('<span class="icon"></span>');
+
+        const iconId = "icon-temp-" + hour;
+        console.log("iconId:", iconId);
+
+        iconSpan.attr("id", iconId);
+        console.log("iconSpan:", iconSpan);
+
+        cardBody.append(iconSpan);
+
+        const cardFooter = $('<div class="cardFooter"></div>');
+
+        const timeTempSpan = $('<span class="temp"></span>');
+        // console.log("temp:", temp);
+
+        timeTempSpan.attr("data-iconspan", hour);
+        console.log(cardFooter);
+
+        cardFooter.append(timeTempSpan);
+
+        card.append(cardHeader);
+        card.append(cardBody);
+        card.append(cardFooter);
+
+        $(".horizontal-scroll").append(card);
+    };
 
 
 };

@@ -65,6 +65,7 @@ header {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    text-shadow: 2px 2px #fff;
     
     /* LOGO PADDING FOR WEATHER DASHBOARD TEXT FROM SQUARE */
     padding-left: 10px;
@@ -121,6 +122,7 @@ header {
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     margin-top: 100px;
+    text-shadow: 1px 1px #fff;
 }
 
 .dayStatus {
@@ -129,6 +131,7 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px #fff;
 }
 
 .time {
@@ -137,6 +140,7 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px #fff;
 }
 
 .temp {
@@ -144,6 +148,7 @@ header {
     text-align: center;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px #fff;
 }
 
 /************************************************************/
@@ -172,6 +177,7 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px #fff;
 }
 
 #dateContainer {
@@ -188,6 +194,7 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px #fff;
 }
 
 .left {
@@ -208,6 +215,7 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px #fff;
 }
 
 #lowTempContainer {
@@ -224,12 +232,38 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px #fff;
 }
 
 .right {
     float: right;
 }
+/************************************************************/
 
+.horizontal-scroll {
+    overflow: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 30px 0;
+}
+
+.card {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    margin: 0 10px
+}
+
+.cardTitle {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    font-family:'Poppins', sans-serif;
+    text-shadow: 1px 1px #fff;
+}
+
+
+/************************************************************/
 /************************************************************/
 
 /* RAINY DAY WEATHER DARK CLOUD 1  */
@@ -290,5 +324,3 @@ header {
         transform: translateX(100%);
     }
 }
-
-

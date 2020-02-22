@@ -1,174 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!-- META TAGS -->
-    <meta charset="UTF-8">
-    <meta name="description" content="weather app">
-    <meta name="author" content="carla beltran">
-    <meta http-equiv="X-UA-Compatible" content="ie=Edge">
+    <head>
+        <!-- META TAGS -->
+        <meta charset="UTF-8">
+        <meta name="description" content="weather app">
+        <meta name="author" content="carla beltran">
+        <meta http-equiv="X-UA-Compatible" content="ie=Edge">
 
-    <!-- RESPONSIVE -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- RESPONSIVE -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- BROWSER TAB TITLE -->
-    <title>Weather App</title>
+        <!-- BROWSER TAB TITLE -->
+        <title>Weather App</title>
 
-    <!-- CSS LINK-->
-    <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- CSS LINK-->
+        <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- GOOGLE MENU BAR ICON -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- GOOGLE MENU BAR ICON -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- GOOGLE FONTS POPPINS -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <!-- GOOGLE FONTS POPPINS -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-<!-- MAIN CONTAINER -->
-<!-- WEATHER BACKGROUND STATUS-->
-<main class="container-fluid bg-bluesky" id="current-weather-status">
+        <!-- MAIN CONTAINER -->
+        <!-- WEATHER BACKGROUND STATUS-->
+        <main class="container-fluid bg-bluesky" id="current-weather-status">
 
-    <!-- HEADER  -->
-    <header>
+            <!-- HEADER  -->
+            <header>
 
-        <!-- LOGO -->
-        <div class="logo">
-                
-            <!-- SQUARE WEATHER DASHBOARD TEXT  -->
-            <div class="square">
-                    
-                Weather
-                <br />
-                Dashboard
-                        
-            <!-- END OF SQUARE LOGO -->
+                <!-- LOGO -->
+                <div class="logo">
+
+                    <!-- SQUARE WEATHER DASHBOARD TEXT  -->
+                    <div class="square">
+
+                        Weather
+                        <br />
+                        Dashboard
+
+                        <!-- END OF SQUARE LOGO -->
+                    </div>
+
+                    <!-- END OF LOGO -->
+                </div>
+
+                <!-- MENU -->
+                <div class="top-right">
+
+                    <!-- MENU BAR ICON -->
+                    <span class="menu"><i class="material-icons" style="font-size:48px;">menu</i></span>
+
+                    <!-- END OF MENU -->
+                </div>
+
+                <!-- END OF HEADER -->
+            </header>
+
+            <!-- BLUE SKY -->
+            <div class="bluesky" id="blueSkyPage">
+
+                <!-- CLOUD 1 -->
+                <div class="cloud1"><img src="./images/cloud2.png"></div>
+
+                <!-- CLOUD 2 -->
+                <div class="cloud2"><img src="./images/clouds3.png"></div>
+
+                <!-- CLOUD 3 -->
+                <div class="cloud3"><img src="./images/clouds4.png"></div>
+
+                <!-- CURRENT CITY -->
+                <div class="city">Plano</div>
+
+                <!-- CURRENT DAY WEATHER STATUS -->
+                <div class="dayStatus">clear</div>
+
+                <!-- TIME -->
+                <div class="time" id="time"></div>
+
+                <!-- TEMP -->
+                <div class="temp">80</div>
+
+                <div class="box" id="dateTempContainer">
+
+                    <!-- WEEKDAY & DATE CONTAINER -->
+                    <div class="left" id="weekdayContainer">
+
+                        <!-- WEEKDAY -->
+                        <div class="weekday"></div>
+
+                        <!-- END WEEKDAY & DATE CONTAINER  -->
+                    </div>
+
+                    <!-- LEFT BOX CONTAINER FOR DATE -->
+                    <div class="left" id="dateContainer">
+
+                        <!-- DATE -->
+                        <div class="date"></div>
+
+                        <!-- END LEFT BOX CONTAINER FOR DATE -->
+                    </div>
+
+                    <!-- HIGH TEMP CONTAINER -->
+                    <div class="right" id="highTempContainer">
+
+                        <!-- HIGH TEMP -->
+                        <div class="highTemp">100</div>
+
+                        <!-- END OF HIGH TEMP CONTAINER -->
+                    </div>
+
+                    <!-- LOW TEMP CONTAINER-->
+                    <div class="right" id="lowTempContainer">
+
+                        <!-- LOW TEMP -->
+                        <div class="lowTemp">29</div>
+
+                        <!-- END LOW TEMP CONTAINER -->
+                    </div>
+
+                    <!-- END OF DATE & TEMP CONTAINER -->
+                </div>
+
+                <!-- SCROLL HORIZONTAL CONTAINER WITH WEATHER FORCAST BASED ON TIME -->
+                <div class="horizontal-scroll">
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <!-- END BLUE SKY -->
             </div>
-                
-        <!-- END OF LOGO -->
-        </div>
 
-        <!-- MENU -->
-        <div class="top-right">
-                        
-            <!-- MENU BAR ICON -->
-            <span class="menu"><i class="material-icons"style="font-size:48px;">menu</i></span>
-                
-        <!-- END OF MENU -->
-        </div>
-            
-    <!-- END OF HEADER -->
-    </header>
+            <!-- RAINY DAY -->
+            <div class="rainyday" id="rainyDayPage">
 
-        <!-- BLUE SKY -->
-        <div class="bluesky" id="blueSkyPage">
+                <!-- CLOUD 1 -->
+                <div class="darkCloud1"><img src="./images/cloud2.png"></div>
 
-            <!-- CLOUD 1 -->
-            <div class="cloud1"><img src="./images/cloud2.png"></div>
-            
-            <!-- CLOUD 2 -->
-            <div class="cloud2"><img src="./images/clouds3.png"></div>
-            
-            <!-- CLOUD 3 -->
-            <div class="cloud3"><img src="./images/clouds4.png"></div>
+                <!-- CLOUD 2 -->
+                <div class="darkCloud2"><img src="./images/clouds3.png"></div>
 
-            <!-- CURRENT CITY -->
-            <div class="city">Plano</div>
+                <!-- CLOUD 3 -->
+                <div class="darkCloud3"><img src="./images/clouds4.png"></div>
 
-            <!-- CURRENT DAY WEATHER STATUS -->
-            <div class="dayStatus">clear</div>
-
-            <!-- TIME -->
-            <div class="time" id="time"></div>
-            
-            <!-- TEMP -->
-            <div class="temp">80</div>
-
-            <div class="box" id="dateTempContainer">
-
-                <!-- WEEKDAY & DATE CONTAINER -->
-                <div class="left" id="weekdayContainer">
-                        
-                    <!-- WEEKDAY -->
-                    <div class="weekday"></div>
-                        
-                <!-- END WEEKDAY & DATE CONTAINER  -->
-                </div>
-
-                <!-- LEFT BOX CONTAINER FOR DATE -->
-                <div class="left" id="dateContainer">
-                    
-                    <!-- DATE -->
-                    <div class="date"></div>
-                    
-                <!-- END LEFT BOX CONTAINER FOR DATE -->
-                </div>
-                        
-                <!-- HIGH TEMP CONTAINER -->
-                <div class="right" id="highTempContainer">
-                        
-                    <!-- HIGH TEMP -->
-                    <div class="highTemp">100</div>
-                        
-                <!-- END OF HIGH TEMP CONTAINER -->
-                </div>
-                        
-                <!-- LOW TEMP CONTAINER-->
-                <div class="right" id="lowTempContainer">
-                        
-                    <!-- LOW TEMP -->
-                    <div class="lowTemp">29</div>
-                        
-                <!-- END LOW TEMP CONTAINER -->
-                </div>
-                        
-            <!-- END OF DATE & TEMP CONTAINER -->
+                <!-- END RAINY DAY -->
             </div>
 
-            <!-- SCROLL HORIZONTAL CONTAINER WITH WEATHER FORCAST BASED ON TIME -->
-            <div class="weatherTime">
+            <!-- CLEAR STARY NIGHT -->
 
+            <!-- THUNDER & LIGHTING -->
 
-
-
-
-            </div>
-
-
-
-
-
-
-
-
-
-
-        
-        <!-- END BLUE SKY -->
-        </div>
-        
-        <!-- RAINY DAY -->
-        <div class="rainyday" id="rainyDayPage">
-            
-            <!-- CLOUD 1 -->
-            <div class="darkCloud1"><img src="./images/cloud2.png"></div>
-        
-            <!-- CLOUD 2 -->
-            <div class="darkCloud2"><img src="./images/clouds3.png"></div>
-        
-            <!-- CLOUD 3 -->
-            <div class="darkCloud3"><img src="./images/clouds4.png"></div>
-        
-        <!-- END RAINY DAY -->
-        </div>
-
-        <!-- CLEAR STARY NIGHT -->
-
-        <!-- THUNDER & LIGHTING -->
-
-        <!-- SNOW -->
+            <!-- SNOW -->
 
 
 
@@ -177,20 +177,21 @@
 
 
 
-    <!-- END OF MAIN CONTENT CONTAINER -->
-    </main>
+            <!-- END OF MAIN CONTENT CONTAINER -->
+        </main>
 
-    <!-- ON THE LEFT I WANT A + TO OPEN A SIDE BAR -->
-    <!-- HALF THE SCREEN FOR THE WEATHER FORECAST MAYBE GRADIENT BACKGROUND WITH OVERLAY WHITE TEXT -->
-    
-    <!-- jquery link -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    
-    <!-- moment link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    
-    <!-- javascript link -->
-    <script type="text/javascript" src="script.js"></script>
+        <!-- ON THE LEFT I WANT A + TO OPEN A SIDE BAR -->
+        <!-- HALF THE SCREEN FOR THE WEATHER FORECAST MAYBE GRADIENT BACKGROUND WITH OVERLAY WHITE TEXT -->
 
-</body>
+        <!-- jquery link -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <!-- moment link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+        <!-- javascript link -->
+        <script type="text/javascript" src="script.js"></script>
+
+    </body>
+
 </html>
