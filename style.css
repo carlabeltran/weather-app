@@ -113,8 +113,9 @@ header {
     animation: cloudThree infinite 20s linear;
 }
 
+/************************************************************/
 .city {
-    font-size: 60px;
+    font-size: 70px;
     text-align: center;
     font-weight: bolder;
     color: #ffffff;
@@ -123,81 +124,111 @@ header {
 }
 
 .dayStatus {
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
-    font-weight: bolder;
+    font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    margin-top: 5px;
 }
 
 .time {
-    font-size: 15px;
+    font-size: 25px;
     text-align: center;
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    margin-top: 5px;
-    margin-bottom: 10px;
 }
 
-.dateTempContainer {
-    width: 100%;
-    border-bottom: 2px solid #ffffff;
-    padding-top: 100px;
-    padding-bottom: 5px;
+.temp {
+    font-size: 150px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
 }
 
-.weekDateContainer {
-    width: 20%;
-    margin-left: 20px;
-    margin-right: 5px;
-}
-
-
-.left {
-    position: absolute;
-}
-
+/************************************************************/
 .box {
     display: inline-block;
     width: 100px;
-    height: 50px;
+    height: 100px;
 }
 
+#dateTempContainer {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ffffff;
+}
 
-.weekdayContainer {
-    padding-right: 5px;
-    padding-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+#weekdayContainer {
+    position: relative;
+    align-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 50px;
 }
 
 .weekday {
-    font-size: 20px;
-    text-align: left;
+    font-size: 25px;
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
 
-.dateContainer {
-    padding-right: 5px;
-    padding-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+#dateContainer {
+    position: relative;
+    align-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 50px;
 }
 
-
 .date {
-    font-size: 20px;
-    text-align: right;
-    font-weight: bolder;
+    font-size: 25px;
+    font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
 
+.left {
+    float: left;
+}
 
+#highTempContainer {
+    position: relative;
+    align-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 50px;
+}
+
+.highTemp {
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#lowTempContainer {
+    position: relative;
+    align-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 50px;
+}
+
+.lowTemp {
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.right {
+    float: right;
+}
 
 /************************************************************/
 
@@ -223,14 +254,6 @@ header {
 }
 
 /************************************************************/
-
-
-
-
-
-
-
-
 
 /* ANIMATES CLOUD 1 */
 @keyframes cloudOne {

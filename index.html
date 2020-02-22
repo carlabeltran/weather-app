@@ -74,49 +74,56 @@
             <!-- CLOUD 3 -->
             <div class="cloud3"><img src="./images/clouds4.png"></div>
 
+            <!-- CURRENT CITY -->
             <div class="city">Plano</div>
 
+            <!-- CURRENT DAY WEATHER STATUS -->
             <div class="dayStatus">clear</div>
 
+            <!-- TIME -->
             <div class="time"></div>
-        
-            <div class="dateTempContainer">
-
-                <div class="weekDateContainer">
-                    
-                    <div class="box left">
-
-                        <div class="weekday"></div>
-                    
-                    </div>
-
-                    <div class="box left"></div>
-                    
-                        <div class="date"></div>
-                
-                    </div>
-                
-                </div>
-                <!-- END OF LEFT CONTAINER -->
-                </div>
-                
-                <div class="right">
-                
-                    <div class="highTempContainer">
-                
-                        <div class="highTempDay"></div>
             
-                    </div>
-                    
-                    <div class="lowTempContainer">
+            <!-- TEMP -->
+            <div class="temp">80</div>
 
-                        <div class="lowTempDay"></div>
-                
-                    </div>
-                
-                <!-- END OF RIGHT CONTAINER -->
+            <div class="box" id="dateTempContainer">
+
+                <!-- WEEKDAY & DATE CONTAINER -->
+                <div class="left" id="weekdayContainer">
+                        
+                    <!-- WEEKDAY -->
+                    <div class="weekday"></div>
+                        
+                <!-- END WEEKDAY & DATE CONTAINER  -->
                 </div>
-            
+
+                <!-- LEFT BOX CONTAINER FOR DATE -->
+                <div class="left" id="dateContainer">
+                    
+                    <!-- DATE -->
+                    <div class="date"></div>
+                    
+                <!-- END LEFT BOX CONTAINER FOR DATE -->
+                </div>
+                        
+                <!-- HIGH TEMP CONTAINER -->
+                <div class="right" id="highTempContainer">
+                        
+                    <!-- HIGH TEMP -->
+                    <div class="highTemp">100</div>
+                        
+                <!-- END OF HIGH TEMP CONTAINER -->
+                </div>
+                        
+                <!-- LOW TEMP CONTAINER-->
+                <div class="right" id="lowTempContainer">
+                        
+                    <!-- LOW TEMP -->
+                    <div class="lowTemp">29</div>
+                        
+                <!-- END LOW TEMP CONTAINER -->
+                </div>
+                        
             <!-- END OF DATE & TEMP CONTAINER -->
             </div>
         
