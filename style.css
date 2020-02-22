@@ -1,0 +1,144 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css family=Poppins&display=swap');
+
+/* HTML BODY */
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+/* MAIN WEATHER BACKGROUND IMAGE CONTAINER */
+.container-fluid,
+.bg-bluesky {
+    /* IMAGE */
+    background-image: url(./images/bluesky.jpeg);
+
+    /* FULL HEIGHT */
+    height: 100%;
+
+    overflow: hidden;
+    
+    position: relative;
+
+    /* CENTER & SCALE IMAGE */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding-bottom: 60px;
+    margin-top: 2px;
+    border-bottom: 2px solid #ffffff;
+    padding-left: 20px;
+}
+
+/* LOGO CONTAINER */
+.logo {
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* BOXED LOGO WEATHER DASHBOARD */
+.square {
+    display: block;
+    overflow: hidden;
+    align-content: left;
+    background-color: #ffffff;
+    
+    /* SQUARE BOX BORDER */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    border: 3px solid #ffffff;
+    border-radius: 0;
+    
+    /* WEATHER DASHBOARD TEXT */
+    font-weight: bold;
+    font-size: 20px;
+    color: #99CCFF;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    
+    /* LOGO PADDING FOR WEATHER DASHBOARD TEXT FROM SQUARE */
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;;
+}
+
+/* MENU BAR ICON */
+.menu {
+    align-content: right;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+i {
+    align-self: right;
+    color: #ffffff;
+    font-size: 48px;
+}
+
+/* MAIN WEATHER CLOUD 1  */
+.container-fluid .cloud1 {
+    position: absolute;
+    top: 60px;
+    animation: cloudOne infinite 30s linear;
+}
+
+/* MAIN WEATHER CLOUD 2  */
+.container-fluid .cloud2 {
+    position: absolute;
+    top: -50px;
+    animation: cloudTwo infinite 45s linear;
+}
+
+/* MAIN WEATHER CLOUD 3  */
+.container-fluid .cloud3 {
+    position: absolute;
+    top: 0px;
+    animation: cloudThree infinite 20s linear;
+}
+
+/* ANIMATES CLOUD 1 */
+@keyframes cloudOne {
+    0%
+    {
+        transform: translateX(-100%);
+    }
+    100% 
+    {
+        transform: translateX(100%);
+    }
+}
+
+/* ANIMATES CLOUD 2 */
+@keyframes cloudTwo {
+    0%
+    {
+        transform: translateX(-100%);
+    }
+    100% 
+    {
+        transform: translateX(100%);
+    }
+}
+
+/* ANIMATES CLOUD 3 */
+@keyframes cloudThree {
+    0%
+    {
+        transform: translateX(-100%);
+    }
+    100% 
+    {
+        transform: translateX(100%);
+    }
+}
+
+
