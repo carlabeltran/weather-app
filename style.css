@@ -113,7 +113,6 @@ header {
     animation: cloudThree infinite 20s linear;
 }
 
-
 .city {
     font-size: 60px;
     text-align: center;
@@ -129,8 +128,76 @@ header {
     font-weight: bolder;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
+    margin-top: 5px;
 }
+
+.time {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.dateTempContainer {
+    width: 100%;
+    border-bottom: 2px solid #ffffff;
+    padding-top: 100px;
+    padding-bottom: 5px;
+}
+
+.weekDateContainer {
+    width: 20%;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+
+.left {
+    position: absolute;
+}
+
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+
+
+.weekdayContainer {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.weekday {
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dateContainer {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.date {
+    font-size: 20px;
+    text-align: right;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 
 /************************************************************/
 
