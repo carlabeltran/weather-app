@@ -1,5 +1,6 @@
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+/************************************************************/
 
 /* HTML BODY */
 body,
@@ -7,6 +8,8 @@ html {
     height: 100%;
     margin: 0;
 }
+
+/************************************************************/
 
 /* MAIN WEATHER BACKGROUND IMAGE CONTAINER */
 .container-fluid,
@@ -30,10 +33,11 @@ html {
 /* HEADER */
 header {
     width: 100%;
-    padding-bottom: 60px;
-    margin-top: 2px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-bottom: 130px;
+    padding-top: 10px;
     border-bottom: 2px solid #ffffff;
-    padding-left: 20px;
 }
 
 /* LOGO CONTAINER */
@@ -56,7 +60,6 @@ header {
     border-radius: 0;
     
     /* WEATHER DASHBOARD TEXT */
-    font-weight: bold;
     font-size: 20px;
     color: #99CCFF;
     text-align: center;
@@ -67,43 +70,100 @@ header {
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 10px;;
+    padding-right: 10px;
 }
 
 /* MENU BAR ICON */
+.top-right {
+    position: relative;
+}
+
 .menu {
-    align-content: right;
-    display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    position: absolute;
+    top: 8px;
+    right: 50px;
+    font-size: xx-large;
 }
 
-i {
-    align-self: right;
+/* ICON */
+.material-icons {
     color: #ffffff;
-    font-size: 48px;
 }
 
-/* MAIN WEATHER CLOUD 1  */
+/************************************************************/
+
+/* BLUE SKY WEATHER CLOUD 1  */
 .container-fluid .cloud1 {
     position: absolute;
     top: 60px;
     animation: cloudOne infinite 30s linear;
 }
 
-/* MAIN WEATHER CLOUD 2  */
+/* BLUE SKY WEATHER CLOUD 2  */
 .container-fluid .cloud2 {
     position: absolute;
     top: -50px;
     animation: cloudTwo infinite 45s linear;
 }
 
-/* MAIN WEATHER CLOUD 3  */
+/* BLUE SKY WEATHER CLOUD 3  */
 .container-fluid .cloud3 {
     position: absolute;
     top: 0px;
     animation: cloudThree infinite 20s linear;
 }
+
+
+.city {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px;
+}
+
+.dayStatus {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+}
+
+/************************************************************/
+
+/* RAINY DAY WEATHER DARK CLOUD 1  */
+.container-fluid .cloud1 {
+    position: absolute;
+    top: 60px;
+    animation: cloudOne infinite 30s linear;
+}
+
+/* RAINY DAY WEATHER DARK CLOUD 2  */
+.container-fluid .cloud2 {
+    position: absolute;
+    top: -50px;
+    animation: cloudTwo infinite 45s linear;
+}
+
+/* RAINY DAY WEATHER DARK CLOUD 3  */
+.container-fluid .cloud3 {
+    position: absolute;
+    top: 0px;
+    animation: cloudThree infinite 20s linear;
+}
+
+/************************************************************/
+
+
+
+
+
+
+
+
 
 /* ANIMATES CLOUD 1 */
 @keyframes cloudOne {
