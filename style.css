@@ -122,7 +122,6 @@ header {
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     margin-top: 100px;
-    text-shadow: 1px 1px #fff;
 }
 
 .dayStatus {
@@ -131,7 +130,6 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 1px 1px #fff;
 }
 
 .time {
@@ -140,7 +138,6 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 1px 1px #fff;
 }
 
 .temp {
@@ -148,7 +145,6 @@ header {
     text-align: center;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 1px 1px #fff;
 }
 
 /************************************************************/

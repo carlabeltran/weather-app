@@ -51,7 +51,7 @@ console.log("currentWeekday:", currentWeekday);
 // const currentWeatherStatus;
 
 //DISPLAYS THE CURRENT TIME
-$(".time").text();
+$(".time").text(currentTime);
 
 //DISPLAYS THE CURRENT WEEKDAY
 $(".weekday").text(currentWeekday);
