@@ -173,7 +173,6 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 1px 1px #fff;
 }
 
 #dateContainer {
@@ -190,7 +189,6 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 1px 1px #fff;
 }
 
 .left {
@@ -211,7 +209,6 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 1px 1px #fff;
 }
 
 #lowTempContainer {
@@ -228,7 +225,6 @@ header {
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    text-shadow: 1px 1px #fff;
 }
 
 .right {
@@ -247,7 +243,8 @@ header {
     display: inline-block;
     width: 150px;
     text-align: center;
-    margin: 0 10px
+    margin: 0 10px;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
 }
 
 .cardTitle {
@@ -255,33 +252,17 @@ header {
     font-size: 15px;
     font-weight: bold;
     font-family:'Poppins', sans-serif;
-    text-shadow: 1px 1px #fff;
 }
 
 
 /************************************************************/
+
+
+
 /************************************************************/
 
-/* RAINY DAY WEATHER DARK CLOUD 1  */
-.container-fluid .cloud1 {
-    position: absolute;
-    top: 60px;
-    animation: cloudOne infinite 30s linear;
-}
 
-/* RAINY DAY WEATHER DARK CLOUD 2  */
-.container-fluid .cloud2 {
-    position: absolute;
-    top: -50px;
-    animation: cloudTwo infinite 45s linear;
-}
 
-/* RAINY DAY WEATHER DARK CLOUD 3  */
-.container-fluid .cloud3 {
-    position: absolute;
-    top: 0px;
-    animation: cloudThree infinite 20s linear;
-}
 
 /************************************************************/
 
