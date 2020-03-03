@@ -1,187 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <!-- META TAGS -->
-        <meta charset="UTF-8">
-        <meta name="description" content="weather app">
-        <meta name="author" content="carla beltran">
-        <meta http-equiv="X-UA-Compatible" content="ie=Edge">
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="description" content="weather app">
+    <meta name="author" content="carla beltran">
+    <meta http-equiv="X-UA-Compatible" content="ie=Edge">
 
-        <!-- RESPONSIVE -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- BROWSER TAB TITLE -->
-        <title>Weather App</title>
+    <!-- BROWSER TAB TITLE -->
+    <title>Weather App</title>
 
-        <!-- CSS LINK-->
-        <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- CSS LINK-->
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-        <!-- GOOGLE MENU BAR ICON -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- GOOGLE MENU BAR ICON -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- GOOGLE FONTS POPPINS -->
-        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS POPPINS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <!-- MAIN CONTAINER -->
-        <!-- WEATHER BACKGROUND STATUS-->
-        <main class="container-fluid bg-bluesky" id="current-weather-status">
+<!-------------------                          MAIN CONTAINER                      ------------------------------->
+<main class="container-fluid" id="main">
 
-            <!-- HEADER  -->
-            <header>
 
-                <!-- LOGO -->
-                <div class="logo">
+<!-------------------                          BACKGROUND                       ------------------------------->
 
-                    <!-- SQUARE WEATHER DASHBOARD TEXT  -->
-                    <div class="square">
+    <!-- BLUE SKY -->
+    <div class="bluesky">
+    
+        <!-- CLOUD 1 -->
+        <div class="cloud1"><img src="./images/cloud2.png"></div>
+                    
+        <!-- CLOUD 2 -->
+        <div class="cloud2"><img src="./images/clouds3.png"></div>
+                    
+        <!-- CLOUD 3 -->
+        <div class="cloud3"><img src="./images/clouds4.png"></div>
 
-                        Weather
-                        <br />
-                        Dashboard
 
-                        <!-- END OF SQUARE LOGO -->
-                    </div>
+<!-------------------                         /. BACKGROUND                       ------------------------------->
 
-                    <!-- END OF LOGO -->
+
+<!-------------------                          HEADER                       ------------------------------->
+        <!-- HEADER  -->
+        <header>
+
+            <!-- LOGO -->
+            <div class="logo">
+
+                <!-- SQUARE WEATHER DASHBOARD TEXT  -->
+                <div class="square">
+
+                    Weather
+                    <br />
+                    Dashboard
+
+                <!-- END OF SQUARE LOGO -->
                 </div>
-
-                <!-- MENU -->
-                <div class="top-right">
-
-                    <!-- MENU BAR ICON -->
-                    <span class="menu"><i class="material-icons" style="font-size:48px;">menu</i></span>
-
-                    <!-- END OF MENU -->
-                </div>
-
-                <!-- END OF HEADER -->
-            </header>
-
-            <!-- BLUE SKY -->
-            <div class="bluesky" id="blueSkyPage">
-
-                <!-- CLOUD 1 -->
-                <div class="cloud1"><img src="./images/cloud2.png"></div>
-
-                <!-- CLOUD 2 -->
-                <div class="cloud2"><img src="./images/clouds3.png"></div>
-
-                <!-- CLOUD 3 -->
-                <div class="cloud3"><img src="./images/clouds4.png"></div>
-
-                <!-- CURRENT CITY -->
-                <div class="city">Plano</div>
-
-                <!-- CURRENT DAY WEATHER STATUS -->
-                <div class="dayStatus">clear</div>
-
-                <!-- TIME -->
-                <div class="time" id="time"></div>
-
-                <!-- TEMP -->
-                <div class="temp">80</div>
-
-                <div class="box" id="dateTempContainer">
-
-                    <!-- WEEKDAY & DATE CONTAINER -->
-                    <div class="left" id="weekdayContainer">
-
-                        <!-- WEEKDAY -->
-                        <div class="weekday"></div>
-
-                        <!-- END WEEKDAY & DATE CONTAINER  -->
-                    </div>
-
-                    <!-- LEFT BOX CONTAINER FOR DATE -->
-                    <div class="left" id="dateContainer">
-
-                        <!-- DATE -->
-                        <div class="date"></div>
-
-                        <!-- END LEFT BOX CONTAINER FOR DATE -->
-                    </div>
-
-                    <!-- HIGH TEMP CONTAINER -->
-                    <div class="right" id="highTempContainer">
-
-                        <!-- HIGH TEMP -->
-                        <div class="highTemp">100</div>
-
-                        <!-- END OF HIGH TEMP CONTAINER -->
-                    </div>
-
-                    <!-- LOW TEMP CONTAINER-->
-                    <div class="right" id="lowTempContainer">
-
-                        <!-- LOW TEMP -->
-                        <div class="lowTemp">29</div>
-
-                        <!-- END LOW TEMP CONTAINER -->
-                    </div>
-
-                    <!-- END OF DATE & TEMP CONTAINER -->
-                </div>
-
-                <!-- SCROLL HORIZONTAL CONTAINER WITH WEATHER FORCAST BASED ON TIME -->
-                <div class="horizontal-scroll">
-
-
-
-
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-                <!-- END BLUE SKY -->
+                
+            <!-- END OF LOGO -->
             </div>
 
-            <!-- RAINY DAY -->
-            <div class="rainyday" id="rainyDayPage">
+            <!-- MENU -->
+            <div class="top-right">
 
-                <!-- CLOUD 1 -->
-                <div class="darkCloud1"><img src="./images/cloud2.png"></div>
+                <!-- MENU BAR ICON -->
+                <span class="menu"><i class="material-icons" style="font-size:48px;">menu</i></span>
 
-                <!-- CLOUD 2 -->
-                <div class="darkCloud2"><img src="./images/clouds3.png"></div>
-
-                <!-- CLOUD 3 -->
-                <div class="darkCloud3"><img src="./images/clouds4.png"></div>
-
-                <!-- END RAINY DAY -->
+            <!-- END OF MENU -->
             </div>
 
-            <!-- CLEAR STARY NIGHT -->
+        <!-- END OF HEADER -->
+        </header>
 
-            <!-- THUNDER & LIGHTING -->
-
-            <!-- SNOW -->
-
+<!-------------------            /.  HEADER                      ------------------------------->
 
 
+<!-------------------                          CURRENT WEATHER STATUS                       ------------------------------->
+        
+        <div class="weatherBackgroundStatus">
+
+            <!-- ANIMATED WEATHER ICON -->
+            <div class="currentWeatherIcon"></div>
+                
+            <!-- CURRENT CITY -->
+            <div class="city">Plano</div>
+
+            <!-- CURRENT DAY WEATHER STATUS -->
+            <div class="dayStatus">clear</div>
+
+            <!-- TIME -->
+            <div class="time" id="time"></div>
+
+            <!-- TEMP -->
+            <div class="temp">80</div>
+
+
+            <div class="box" id="dateTempContainer">
+
+                <!-- WEEKDAY & DATE CONTAINER -->
+                <div class="left" id="weekdayContainer">
+
+                    <!-- WEEKDAY -->
+                    <div class="weekday"></div>
+
+                <!-- END WEEKDAY & DATE CONTAINER  -->
+                </div>
+
+                <!-- LEFT BOX CONTAINER FOR DATE -->
+                <div class="left" id="dateContainer">
+
+                    <!-- DATE -->
+                    <div class="date"></div>
+
+                <!-- END LEFT BOX CONTAINER FOR DATE -->
+                </div>
+
+                <!-- HIGH TEMP CONTAINER -->
+                <div class="right" id="highTempContainer">
+
+                    <!-- HIGH TEMP -->
+                    <div class="highTemp">100</div>
+
+                <!-- END OF HIGH TEMP CONTAINER -->
+                </div>
+
+                <!-- LOW TEMP CONTAINER-->
+                <div class="right" id="lowTempContainer">
+
+                    <!-- LOW TEMP -->
+                    <div class="lowTemp">29</div>
+
+                <!-- END LOW TEMP CONTAINER -->
+                </div>
+
+            <!-- END OF DATE & TEMP CONTAINER -->
+            </div>
+            
+        <!-- END OF CURRENT WEATHER STATUS CONTAINER -->
+        </div>
+
+<!-------------------                         /. CURRENT WEATHER STATUS                       ------------------------------->
+
+
+<!-------------------                          HOURLY WEATHER FORECAST                       ------------------------------->
+
+        <!-- SCROLL HORIZONTAL CONTAINER -->
+        <div class="horizontal-scroll">
 
 
 
 
 
-            <!-- END OF MAIN CONTENT CONTAINER -->
-        </main>
+        </div>
 
-        <!-- ON THE LEFT I WANT A + TO OPEN A SIDE BAR -->
-        <!-- HALF THE SCREEN FOR THE WEATHER FORECAST MAYBE GRADIENT BACKGROUND WITH OVERLAY WHITE TEXT -->
+<!-------------------                         /. HOURLY WEATHER FORECAST                       ------------------------------->
+
+
+<!-------------------                          SEVEN DAY WEATHER FORECAST                       ------------------------------->
+                
+        <div class="sevenDayForecast">
+                    
+            <div class="currentWeather">
+                    
+                    
+                    
+            </div>
+                    
+                    
+            <div class="tomorrowsWeather">
+                    
+                    
+                    
+            </div>
+                    
+            <div class="day3">
+                    
+                    
+                    
+            </div>
+                    
+            <div class="day4">
+                    
+                    
+                    
+            </div>
+                    
+            <div class="day5">
+                    
+                    
+                    
+            </div>
+                    
+            <div class="day6">
+                    
+                    
+                    
+            </div>
+                    
+            <div class="day7">
+                    
+                    
+                    
+            </div>
+                    
+                    
+        </div>
+
+<!-------------------                         /. SEVEN DAY WEATHER FORECAST                       ------------------------------->
+
+
+<!-------------------                         ADDITIONAL WEATHER INFO                       ------------------------------->
+        <div class="additionalCurrentWeatherInfo">
+                    
+            <div class="">
+                    
+                <div class="windSpeed">
+                    
+                    
+                </div>
+                    
+                <div class="feelsLike">
+                    
+                    
+                </div>
+                    
+            </div>
+                    
+            <div class="">
+                    
+                <div class="airQualityIndex">
+                    
+                    
+                </div>
+                    
+                <div class="airQuality">
+                    
+                    
+                </div>
+                    
+            </div>
+                    
+        </div>
+<!-------------------                        /. ADDITIONAL WEATHER INFO                       ------------------------------->
+
+    <!-- END BLUE SKY -->
+    </div>
+
+</main>
+<!-------------------                        /.  MAIN CONTAINER                      ------------------------------->
+
 
         <!-- jquery link -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
