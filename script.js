@@ -1,101 +1,140 @@
 //TESTING TO SEE IF JAVASCRIPT FILE & HTML ARE PROPERLY LINKED
 console.log("HTML & JAVA ARE PROPERLY LINKED!!");
 
-//CALLING MY TIME NOW FUNCTION TO ACTION
-timeNow();
-console.log("timeNow:", timeNow);
+//API KEY
+const key = "166a433c57516f51dfab1f7edaed8413"; 
 
-displayWeatherTimeIcons();
-/////////////////////////////////////////////////////////////////////
-//FUNCTION TO UPDATE MY TIME HOURS AND MINUTES
-/////////////////////////////////////////////////////////////////////
-const updateTime = setInterval(timeNow, 60000);
-console.log("updateTime:", updateTime);
+// CREATING URL NEEDED TO QUERY DATABASE
+const baseURL = "https://api.openweathermap.org/data/2.5/weather?q=" + key;
+  
 
-//FUNCTION TO UPDATE MY TIME HOURS AND MINUTES
-function timeNow() {
-  const time = new Date();
-  console.log("time:", time);
+const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + key;
 
-  const hours = time.getHours();
-  console.log("hours:", hours);
+const uvURL = "https://api.openweathermap.org/data/2.5/uvi?";
 
-  const minutes = time.getMinutes();
-  console.log("minutes:", minutes);
 
-  const ampm = moment().format("A");
+//RUNNING AJAX CALL TO OPENWEATHERMAP API
+$.ajax({
+  url: baseURL,
+  method: "GET"
+})
+  //STORE ALL RETRIEVED DATA INSIDE OBJECT RESPONSE
+  .then(function (response) {
+        
+    console.log(baseURL);
+    console.log(response);
+        
+    //TRANSFER DATA/CONTENT TO HTML
+    // CITY
+    $(".city").html(response.name + " Weather Details");
+    
+    //WIND
+    $(".wind").text("Wind Speed: " + response.wind.speed);
+        
+    //HUMIDITY
+    $(".humidity").text("Humidity: " + response.main.humidity);
+        
+    //TEMP
+    $(".temp").text("Temperature (F) " + response.main.temp);
 
-  document.getElementById("time").innerText =
-    hours + ":" + minutes + " " + ampm;
-}
+    console.log("Wind Speed: " + response.wind.speed);
+    console.log("Humidity: " + response.main.humidity);
+    console.log("Temperature (F): " + response.main.temp);
 
-/////////////////////////////////////////////////////////////////////
-//VARIABLES & DOM ELEMENTS
-/////////////////////////////////////////////////////////////////////
-//DISPLAYS THE DAY
-const todaysDate = moment().format("MMMM D,  YYYY");
-console.log("todaysDate:", todaysDate);
 
-//DISPLAYS THE CURRENT TIME AM/PM
-const currentTime = moment().format("h:mm a");
-console.log("currentTime:", currentTime);
 
-//DISPLAYS THE CURRENT HOUR AM / PM
-const currentHour = moment().format("h A");
-console.log("currentHour:", currentHour);
+  });
 
-//DISPLAYS THE CURRENT HOUR AM / PM
-const currentWeekday = moment().format("dddd");
-console.log("currentWeekday:", currentWeekday);
 
-// const currentWeatherStatus;
+  //CALLING MY TIME NOW FUNCTION TO ACTION
+  timeNow();
+  console.log("timeNow:", timeNow);
 
-//DISPLAYS THE CURRENT TIME
-$(".time").text(currentTime);
+  displayWeatherTimeIcons();
+  /////////////////////////////////////////////////////////////////////
+  //FUNCTION TO UPDATE MY TIME HOURS AND MINUTES
+  /////////////////////////////////////////////////////////////////////
+  const updateTime = setInterval(timeNow, 60000);
+  console.log("updateTime:", updateTime);
 
-//DISPLAYS THE CURRENT WEEKDAY
-$(".weekday").text(currentWeekday);
+  //FUNCTION TO UPDATE MY TIME HOURS AND MINUTES
+  function timeNow() {
+    const time = new Date();
+    console.log('time:', time)
 
-//DISPLAYS THE CURRENT DATE
-$(".date").text(todaysDate);
+    const hours = time.getHours();
+    console.log("hours:", hours);
+    
+    const minutes = time.getMinutes();
+    console.log("minutes:", minutes);
 
-////////////////////////////////////////////////////////////////////
-//CREATE A FUNCTION TO FORMAT HOURS && CHANGES THE HOUR DISPLAY FROM MIILTARY TIME TO REGULAR TIME
-/////////////////////////////////////////////////////////////////////
-function formatAMPM(hour) {
-  console.log("format AMPM is working!!");
+    const ampm = moment().format("A");
 
-  const ampm = hour >= 12 ? "PM" : "AM";
-  //variable ampm equals hours greater than or equal to
-  //variable ampm is storing greater than or equal to 12 ternary operator
-  //>= : greater than or equal to
-  // ?: ternary operator
+    document.getElementById("time").innerText = hours + ":" + minutes + " " + ampm;
+  }
 
-  hour = hour % 12;
-  //hour equal hours
-  //% :   Modulus (Division Remainder)
+  /////////////////////////////////////////////////////////////////////
+  //VARIABLES & DOM ELEMENTS
+  /////////////////////////////////////////////////////////////////////
+  //DISPLAYS THE DAY
+  const todaysDate = moment().format("MMMM D,  YYYY");
+  console.log("todaysDate:", todaysDate);
 
-  hour = hour ? hour : 12;
-  //HOURS EQUALS HOURS
+  //DISPLAYS THE CURRENT TIME AM/PM
+  const currentTime = moment().format("h:mm a");
+  console.log("currentTime:", currentTime);
 
-  return hour + " " + ampm;
-}
-//INITIALIZE FORMATAMPM(HOURS)
-formatAMPM();
-/////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////
+  //DISPLAYS THE CURRENT HOUR AM / PM
+  const currentHour = moment().format("h A");
+  console.log("currentHour:", currentHour);
+
+  //DISPLAYS THE CURRENT HOUR AM / PM
+  const currentWeekday = moment().format("dddd");
+  console.log("currentWeekday:", currentWeekday);
+
+  // const currentWeatherStatus;
+
+  //DISPLAYS THE CURRENT TIME
+  $(".time").text(currentTime);
+
+  //DISPLAYS THE CURRENT WEEKDAY
+  $(".weekday").text(currentWeekday);
+
+  //DISPLAYS THE CURRENT DATE
+  $(".date").text(todaysDate);
+
+
+  ////////////////////////////////////////////////////////////////////
+  //CREATE A FUNCTION TO FORMAT HOURS && CHANGES THE HOUR DISPLAY FROM MIILTARY TIME TO REGULAR TIME
+  /////////////////////////////////////////////////////////////////////
+  function formatAMPM(hour) {
+    console.log("format AMPM is working!!");
+    
+    const ampm = hour >= 12 ? "PM" : "AM";
+    hour = hour % 12;
+    
+    hour = hour ? hour : 12;
+    //HOURS EQUALS HOURS 
+    
+    return hour + " " + ampm;
+  };
+  //INITIALIZE FORMATAMPM(HOURS)
+  formatAMPM();
+  /////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////
 
 function displayWeatherTimeIcons() {
-  //THIS VARIBALE STORS THE HOUR ID
+
+  //THIS VARIBALE STORES THE HOUR ID
   const hourId = parseInt(moment().hour());
   console.log("hourId:", hourId);
 
-  //HOUR FOR LOOP
+  //HOUR FOR LOOP 
   for (let hour = 0; hour <= 24; hour++) {
     //variable hour = 9am; less than 6pm; hour increase each time)
 
     const hourEl = moment().hour(hour);
-    console.log("hourEl:", hourEl);
+    console.log("hourEl:", hourEl)
 
     const hourIndex = parseInt(hourEl.format("h"));
     console.log("hourIndex:", hourIndex);
@@ -105,11 +144,7 @@ function displayWeatherTimeIcons() {
 
     const cardHeader = $('<div class="cardTitle"></div>');
 
-    const hourSpan = $(
-      '<span class="hour" style="color:#ffffff;font-size:15px;font-weight: bold;font-family:Poppins, sans-serif;">' +
-        formatAMPM(hour) +
-        "</span>"
-    );
+    const hourSpan = $('<span class="hour" style="color:#ffffff;font-size:15px;font-weight: bold;font-family:Poppins, sans-serif;">' + formatAMPM(hour) + "</span>");
     console.log("hour:", hour);
 
     cardHeader.append(hourSpan);
@@ -141,5 +176,7 @@ function displayWeatherTimeIcons() {
     card.append(cardFooter);
 
     $(".horizontal-scroll").append(card);
-  }
-}
+  };
+};
+
+
